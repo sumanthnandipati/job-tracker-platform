@@ -1,59 +1,81 @@
-# Job Tracker Platform
+#  Job Tracker Platform
 
-A secure Job Application Tracking Platform built using FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication, and Docker.
+A secure and scalable Job Application Tracking Platform built with **FastAPI**, **PostgreSQL**, **SQLAlchemy**, **JWT Authentication**, and **Docker**. This application helps users manage job applications, track application statuses, and analyze their job search progress through dashboard analytics.
 
-## Features
+---
 
-* User Registration and Login
-* JWT Authentication and Authorization
+##  Features
+
+###  Authentication & Security
+
+* User Registration
+* User Login
+* JWT Authentication
+* Protected Routes
+* User-specific Data Access
+
+###  Job Management
+
 * Create Job Applications
-* Update Job Applications
-* Delete Job Applications
+* View All Applications
+* View Single Application
+* Update Applications
+* Delete Applications
+
+###  Advanced Search & Filtering
+
 * Search Jobs by Company
 * Filter Jobs by Status
-* Dashboard Analytics
 * Pagination Support
-* PostgreSQL Database Integration
-* Dockerized Deployment
+
+###  Analytics Dashboard
+
+* Total Applications Count
+* Applied Jobs Count
+* Interview Count
+* Rejected Count
+* Offer Count
+
+###  Deployment Ready
+
+* PostgreSQL Database
+* Docker Containerization
 * Interactive Swagger API Documentation
 
+---
 
-# Job Tracker Platform
+##  Tech Stack
 
-A secure Job Application Tracking Platform built using FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication, and Docker.
+| Technology | Purpose              |
+| ---------- | -------------------- |
+| Python     | Programming Language |
+| FastAPI    | Backend Framework    |
+| PostgreSQL | Database             |
+| SQLAlchemy | ORM                  |
+| Pydantic   | Data Validation      |
+| JWT        | Authentication       |
+| Docker     | Containerization     |
+| Uvicorn    | ASGI Server          |
 
-## Features
+---
 
-- User Registration and Login
-- JWT Authentication
-- CRUD Operations for Jobs
-- Search Jobs by Company
-- Filter Jobs by Status
-- Dashboard Analytics
-- Pagination
-- Docker Support
+## 📸 Project Screenshots
 
-## Key Features
+### Swagger API Documentation
 
-✅ JWT Authentication & Authorization
+![Swagger UI](images/api-overview.png)
 
-✅ Job Application CRUD Operations
+### Dashboard Analytics
 
-✅ Search Jobs by Company
+![Dashboard Analytics](images/dashboard-analytics.png)
 
-✅ Filter Jobs by Status
+### System Architecture
 
-✅ Dashboard Analytics
+![Architecture Diagram](images/architecture-diagram.png)
 
-✅ Pagination Support
+---
 
-✅ PostgreSQL Integration
-
-✅ Docker Containerization
-
-✅ Interactive Swagger Documentation
-
-## Sample Analytics Response
+##  Sample Dashboard Analytics Response
 
 ```json
 {
@@ -64,39 +86,40 @@ A secure Job Application Tracking Platform built using FastAPI, PostgreSQL, SQLA
   "offer": 2
 }
 ```
-## Tech Stack
 
-* Python
-* FastAPI
-* PostgreSQL
-* SQLAlchemy
-* JWT Authentication
-* Docker
-* Pydantic
+---
 
-## API Endpoints
+## 🔗 API Endpoints
 
 ### Authentication
 
-* Register User
-* Login User
+| Method | Endpoint  | Description      |
+| ------ | --------- | ---------------- |
+| POST   | /register | Register User    |
+| POST   | /login    | Login User       |
+| GET    | /profile  | Get User Profile |
 
 ### Jobs
 
-* Create Job
-* Get All Jobs
-* Get Single Job
-* Update Job
-* Delete Job
-* Search Jobs by Company
-* Filter Jobs by Status
+| Method | Endpoint       | Description            |
+| ------ | -------------- | ---------------------- |
+| POST   | /jobs          | Create Job             |
+| GET    | /jobs          | Get All Jobs           |
+| GET    | /jobs/{job_id} | Get Single Job         |
+| PUT    | /jobs/{job_id} | Update Job             |
+| DELETE | /jobs/{job_id} | Delete Job             |
+| GET    | /jobs/search   | Search Jobs by Company |
+| GET    | /jobs/filter   | Filter Jobs by Status  |
 
 ### Dashboard
 
-* Analytics Dashboard
-* Job Status Statistics
+| Method | Endpoint             | Description         |
+| ------ | -------------------- | ------------------- |
+| GET    | /dashboard/analytics | Dashboard Analytics |
 
-## Project Structure
+---
+
+##  Project Structure
 
 ```text
 backend/
@@ -126,19 +149,82 @@ backend/
 │
 ├── Dockerfile
 ├── requirements.txt
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
+---
 
-## Future Enhancements
+## Installation
 
-* Resume Upload
+### Clone Repository
+
+```bash
+git clone https://github.com/sumanthnandipati/job-tracker-platform.git
+cd job-tracker-platform/backend
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Application
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Open:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## 🐳 Docker Setup
+
+Build Docker Image:
+
+```bash
+docker build -t job-tracker .
+```
+
+Run Container:
+
+```bash
+docker run -p 8000:8000 job-tracker
+```
+
+---
+
+##  Future Enhancements
+
+* Resume Upload Feature
 * Email Notifications
 * Interview Scheduling
 * Job Application Reminders
-* Frontend Dashboard using React
-* AWS Deployment
+* React Frontend Dashboard
+* AWS Deployment (EC2 + RDS)
+* CI/CD Pipeline using GitHub Actions
 
-## Author
+---
 
-Sumanth Nandipati
+##  Author
+
+**Sumanth Nandipati**
+
+Master's in Computer Science | Backend & Data Engineering Enthusiast
+
+GitHub: https://github.com/sumanthnandipati
+
+LinkedIn: https://www.linkedin.com/in/sumanth-nandipati-b3a661253
