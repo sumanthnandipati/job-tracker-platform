@@ -63,7 +63,7 @@ A secure Job Application Tracking Platform built using FastAPI, PostgreSQL, SQLA
   "rejected": 3,
   "offer": 2
 }
-
+```
 ## Tech Stack
 
 * Python
