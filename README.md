@@ -17,6 +17,53 @@ A secure Job Application Tracking Platform built using FastAPI, PostgreSQL, SQLA
 * Dockerized Deployment
 * Interactive Swagger API Documentation
 
+
+# Job Tracker Platform
+
+A secure Job Application Tracking Platform built using FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication, and Docker.
+
+## Features
+
+- User Registration and Login
+- JWT Authentication
+- CRUD Operations for Jobs
+- Search Jobs by Company
+- Filter Jobs by Status
+- Dashboard Analytics
+- Pagination
+- Docker Support
+
+## Key Features
+
+✅ JWT Authentication & Authorization
+
+✅ Job Application CRUD Operations
+
+✅ Search Jobs by Company
+
+✅ Filter Jobs by Status
+
+✅ Dashboard Analytics
+
+✅ Pagination Support
+
+✅ PostgreSQL Integration
+
+✅ Docker Containerization
+
+✅ Interactive Swagger Documentation
+
+## Sample Analytics Response
+
+```json
+{
+  "total_jobs": 25,
+  "applied": 15,
+  "interview": 5,
+  "rejected": 3,
+  "offer": 2
+}
+
 ## Tech Stack
 
 * Python
