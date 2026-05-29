@@ -51,17 +51,37 @@ A secure Job Application Tracking Platform built using FastAPI, PostgreSQL, SQLA
 
 ## Project Structure
 
+```text
 backend/
+│
 ├── app/
-│ ├── auth/
-│ ├── config/
-│ ├── database/
-│ ├── models/
-│ ├── routes/
-│ ├── schemas/
-│ └── main.py
+│   ├── auth/
+│   │   └── dependencies.py
+│   │
+│   ├── config/
+│   │
+│   ├── database/
+│   │   └── database.py
+│   │
+│   ├── models/
+│   │   ├── user.py
+│   │   └── job.py
+│   │
+│   ├── routes/
+│   │   ├── user_routes.py
+│   │   └── job_routes.py
+│   │
+│   ├── schemas/
+│   │   ├── user_schema.py
+│   │   └── job_schema.py
+│   │
+│   └── main.py
+│
 ├── Dockerfile
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
+```
+
 
 ## Future Enhancements
 
